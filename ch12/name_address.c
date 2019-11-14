@@ -7,6 +7,7 @@ int main()
 	
 	printf("이름 입력: ");
 	scanf("%s",name);
+
 	printf("현재 주소 입력: ");
 	scanf("%s",address);
 
