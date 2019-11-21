@@ -19,8 +19,7 @@ void main()
 	}
 
 	struct wd_cnt arr[ARR_SIZE];
-	int i, j;
-	int result;
+	int i, result;
 
 	for (i=0; i<ARR_SIZE; i++) {	// arr 초기화
 	strcpy(arr[i].wd," ");
@@ -31,24 +30,23 @@ void main()
 		token = strtok(buffer, " ,.!?\t\n");
 		while (token != NULL) {
 
-			for (j=0; j<ARR_SIZE; j++) {	// 이미 등록된 단어 cnt
-				result = strcmp(arr[j].wd, token);
+			for (i=0; i<ARR_SIZE; i++) {	// 이미 등록된 단어 cnt
+				result = strcmp(arr[i].wd, token);
 				if (result == 0) {
-					arr[j].cnt++;
+					arr[i].cnt++;
 					goto next;
 				}
 			}
 
-			for (j=0; j<ARR_SIZE; j++) {	// 새로운 단어 cnt
-				result = strcmp(arr[j].wd, " ");
+			for (i=0; i<ARR_SIZE; i++) {	// 새로운 단어 등록,  cnt
+				result = strcmp(arr[i].wd, " ");
 				if (result == 0) {
-					strcpy(arr[j].wd, token);
-					arr[j].cnt++;
+					strcpy(arr[i].wd, token);
+					arr[i].cnt++;
 					goto next;
 				}
 			}
 			next:
-				i++;
 				token = strtok(NULL, " ,.!?\t\n");
 		}
 	}
