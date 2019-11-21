@@ -52,7 +52,7 @@ void main()
 				token = strtok(NULL, " ,.!?\t\n");
 		}
 	}
-	i = 0;
+
 	for (i=0; i<ARR_SIZE; i++) {		// 결과 출력
 		result = strcmp(arr[i].wd, " ");
 		if (result == 0)
