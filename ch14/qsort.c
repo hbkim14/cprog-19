@@ -12,14 +12,14 @@ int main()
 {
 	int n;
 
-	printf("정렬 전 배열: ");		// before sorting
+	printf("정렬 전 배열: ");		// Before sorting
 	for (n=0; n<5; n++)
 		printf("%d ", values[n]);
 	printf("\n");
 
 	qsort(values, 5, sizeof(int), compare);
 
-	printf("정렬 후 배열: ");		// after sorting
+	printf("정렬 후 배열: ");		// After sorting
 	for (n=0; n<5; n++)
 		printf("%d ", values[n]);
 	printf("\n");
